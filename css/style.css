@@ -28,6 +28,21 @@ body {
     justify-content: space-around;
 }
 
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 600px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#game > div {
+    display: flex;
+    justify-content: center;
+}
+
 #score {
     display: none;
     #display: flex;
@@ -38,4 +53,23 @@ body {
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#rule {
+    width 400px;
+    height: 5px;
+    background-color: black;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    font-size: 12em;
+    text-align: center;
+    border: none;
+    #border-bottom: 5px solid black;
+}
+
+h4 {
+    font-size: 12em;
 }
