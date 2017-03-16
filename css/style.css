@@ -6,7 +6,7 @@ body {
 #pageContainer {
     min-width: 100%;
     min-height: 100%;
-    background-image: url(../images/background.jpeg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
 }
 
@@ -15,8 +15,8 @@ body {
     #display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    width: 400px;
+    #background-color: white;
+    width: 500px;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -27,8 +27,23 @@ body {
     width: 100%;
     justify-content: space-around;
 }
+#selection > h3 {
+    #font-size: 3em;
+}
+
+#selection > h3:hover {
+    color: red;
+    cursor: pointer;
+    transition: .25s;
+    
+}
+
+#selection > h3:active {
+    color: blue;
+}
 
 #game {
+    #display: none;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -48,28 +63,46 @@ body {
     #display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    width: 400px;
+    #background-color: white;
+    width: 500px;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
+
+
+
+input[type=text] {
+    background-color: rgba(0, 0, 0, 0);
+    width: 200px;
+    font-size: 12em;
+    text-align: center;
+    border: none;
+    border-bottom: 5px solid black;
+}
+
+input[type=submit] {
+    position: absolute;
+    left: -9999px;
+}
+
 
 #rule {
     width 400px;
     height: 5px;
     background-color: black;
 }
-
-input {
-    background-color: rgba(0, 0, 0, 0);
-    width: 200px;
-    font-size: 12em;
-    text-align: center;
-    border: none;
-    #border-bottom: 5px solid black;
+h1 {
+    font-size: 3.5em;
 }
+h2 {
+        font-size: 2.5em;
 
+}
+h3 {
+        font-size: 3em;
+
+}
 h4 {
     font-size: 12em;
 }

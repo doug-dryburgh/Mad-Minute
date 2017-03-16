@@ -17,29 +17,32 @@
             <!--Welcome screen-->
             <div id="selection">
                 <h3>+</h3>
-                <h3>-</h3>
-                <h3>/</h3>
-                <h3>*</h3>
+                <h3>&minus;</h3>
+                <h3>&times;</h3>
+                <h3>&divide;</h3>
                 <h3>?!</h3> </div>
         </div>
         <!--Game area-->
         <div id="game">
             <div>
-                <h4 id="firstNum">4</h4>
-                <h4 id="operatorNum">+</h4>
-                <h4 id="secondNum">5</h4> 
-            </div>
-                        <div id="rule"></div>
-
+                <h4 id="firstNum"></h4>
+                <h4 id="operator"></h4>
+                <h4 id="secondNum"></h4> </div>
+            <div id="rule"></div>
             <div>
-                <input type="text"> </div>
+                <form id="getAnswer" autocomplete="off" accept-charset="utf-8">
+                <input type="text" id="answer" name="answer">
+                <input type="submit" value="Submit Answer">
+                </form>
+            </div>
         </div>
         <!--Score screen-->
         <div id="score">
             <h1>Well done!</h1>
             <p>You answered 30 questions. You got 29 right and 1 wrong.</p>
-            <h3>Try again</h3> </div>
-        <button id="test">test</button>
+            <h2>Try again</h2> </div>
+       <button id="test">test</button>
+        
     </div>
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
