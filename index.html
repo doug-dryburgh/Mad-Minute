@@ -1,49 +1,51 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Mad Minute</title>
     <meta name="description" content="">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <script src="https://use.fontawesome.com/00e02cdbce.js"></script> -->
-</head>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> </head>
 
 <body>
     <div id="pageContainer" class="container">
         <div id="welcome">
             <h1>The Mad Minute</h1>
             <h2>Instructions:</h2>
-            <p>Choose your preferred type of math problems below. You have 60 seconds to answer as many as possible. Be quick but also be careful! Press skip to move to the next question if you do not know an answer or can't think of it fast enough!</p>
+            <p>Choose your preferred type of math problems below. You have 60 seconds to answer as many as possible. Be quick but also be careful!</p>
             <!--Welcome screen-->
             <div id="selection">
                 <h3>+</h3>
                 <h3>&minus;</h3>
                 <h3>&times;</h3>
                 <h3>&divide;</h3>
-                <h3>?!</h3> </div>
+                <h3>?</h3> </div>
         </div>
         <!--Game area-->
         <div id="game">
-            <div>
+            <div id="problem">
                 <h4 id="firstNum"></h4>
                 <h4 id="operator"></h4>
                 <h4 id="secondNum"></h4> </div>
             <div id="rule"></div>
             <div>
                 <form id="getAnswer" autocomplete="off" accept-charset="utf-8">
-                <input type="text" id="answer" name="answer">
-                <input type="submit" value="Submit Answer">
-                </form>
+                    <input type="text" id="answer" name="answer">
+                    <input type="submit" value="Submit Answer"> </form>
             </div>
+            <div>
+                <h2 id="timer"></h2> </div>
         </div>
         <!--Score screen-->
         <div id="score">
             <h1>Well done!</h1>
-            <p>You answered 30 questions. You got 29 right and 1 wrong.</p>
+            <p></p>
             <h2>Try again</h2> </div>
-       <button id="test">test</button>
-        
+        <button id="test">test</button>
     </div>
+    <!--Audio files-->
+    <audio id="correct" src="audio/correct.mp3"></audio>
+    <audio id="incorrect" src="audio/incorrect.wav"></audio>
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="js/js.js"></script>
@@ -52,4 +54,7 @@
 </html>
 <!-- Credits:
 1) Background image: https://www.pexels.com/photo/white-crumpled-paper-220634/
+2) Correct sound effect: https://www.freesound.org/people/LittleRainySeasons/sounds/335908/
+3) Incorrect sound effect: https://www.freesound.org/people/themusicalnomad/sounds/253886/
+4) Font: https://fonts.google.com/specimen/Kanit?selection.family=Kanit
 -->

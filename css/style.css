@@ -1,108 +1,125 @@
-html,
-body {
-    height: 100%;
-}
+ @import url('https://fonts.googleapis.com/css?family=Kanit:900');
+ html,
+ body {
+     height: 100%;
+ }
+ 
+ #pageContainer {
+     min-width: 100%;
+     min-height: 100%;
+     background-image: url(../images/background.jpg);
+     background-size: cover;
+ }
+ 
+ #welcome {
+     #display: none;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     #background-color: white;
+     width: 500px;
+     margin-top: 40px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ #selection {
+     display: flex;
+     width: 100%;
+     justify-content: space-around;
+ }
 
-#pageContainer {
-    min-width: 100%;
-    min-height: 100%;
-    background-image: url(../images/background.jpg);
-    background-size: cover;
-}
-
-#welcome {
-    display: none;
-    #display: flex;
-    flex-direction: column;
-    align-items: center;
-    #background-color: white;
-    width: 500px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#selection {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-#selection > h3 {
-    #font-size: 3em;
-}
-
-#selection > h3:hover {
-    color: red;
-    cursor: pointer;
-    transition: .25s;
-    
-}
-
-#selection > h3:active {
-    color: blue;
-}
-
-#game {
-    #display: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 600px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#game > div {
-    display: flex;
-    justify-content: center;
-}
-
-#score {
-    display: none;
-    #display: flex;
-    flex-direction: column;
-    align-items: center;
-    #background-color: white;
-    width: 500px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
-input[type=text] {
-    background-color: rgba(0, 0, 0, 0);
-    width: 200px;
-    font-size: 12em;
-    text-align: center;
-    border: none;
-    border-bottom: 5px solid black;
-}
-
-input[type=submit] {
-    position: absolute;
-    left: -9999px;
-}
-
-
-#rule {
-    width 400px;
-    height: 5px;
-    background-color: black;
-}
-h1 {
-    font-size: 3.5em;
-}
-h2 {
-        font-size: 2.5em;
-
-}
-h3 {
-        font-size: 3em;
-
-}
-h4 {
-    font-size: 12em;
-}
+ #selection > h3:hover,
+ #score > h2:hover {
+     color: darkred;
+     cursor: pointer;
+     transition: .25s;
+ }
+ 
+ #selection > h3:active,
+ #score > h2:active {
+     color: blue;
+ }
+ 
+ #game {
+     display: none;
+     #display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     width: 600px;
+     margin-top: 40px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ #game > div {
+     display: flex;
+     justify-content: center;
+ }
+ 
+ #score {
+     display: none;
+     #display: flex;
+     flex-direction: column;
+     align-items: center;
+     #background-color: white;
+     width: 500px;
+     margin-top: 40px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ input[type=text] {
+     background-color: rgba(0, 0, 0, 0);
+     width: 200px;
+     font-size: 12em;
+     text-align: center;
+     border: none;
+     border-bottom: 5px solid black;
+     font-family: 'Kanit', sans-serif;
+     text-shadow: 1px 1px 2px gray;
+ }
+ 
+ input[type=submit] {
+     position: absolute;
+     left: -9999px;
+ }
+ 
+ #rule {
+     width 400px;
+     height: 5px;
+     background-color: black;
+ }
+ 
+ h1 {
+     font-size: 3.5em;
+     font-family: 'Kanit', sans-serif;
+     color: black;
+     text-shadow: 1px 1px 2px gray;
+ }
+ 
+ h2 {
+     font-size: 2.5em;
+     font-family: 'Kanit', sans-serif;
+     color: black;
+     text-shadow: 1px 1px 2px gray;
+ }
+ 
+ h3 {
+     font-size: 3em;
+     font-family: 'Kanit', sans-serif;
+     color: black;
+     text-shadow: 1px 1px 2px gray;
+ }
+ 
+ h4 {
+     font-size: 12em;
+     font-family: 'Kanit', sans-serif;
+     color: black;
+     text-shadow: 1px 1px 2px gray;
+ }
+ 
+ p {
+     font-family: sans-serif;
+     color: black;
+ }
