@@ -3,45 +3,50 @@
 
 <head>
     <title>Mad Minute</title>
-    <meta name="description" content="">
+    <meta name="description" content="A quick paced math game. Answer as many math problems you can in a minute. Have fun while learning!">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css"> </head>
 
 <body>
     <div id="pageContainer" class="container">
-        <div id="welcome">
-            <h1>The Mad Minute</h1>
-            <h2>Instructions:</h2>
-            <p>Choose your preferred type of math problems below. You have 60 seconds to answer as many as possible. Be quick but also be careful!</p>
-            <!--Welcome screen-->
-            <div id="selection">
-                <h3>+</h3>
-                <h3>&minus;</h3>
-                <h3>&times;</h3>
-                <h3>&divide;</h3>
-                <h3>?</h3> </div>
+        <div class="row">
+            <div id="welcome" class="col-xs-12">
+                <h1>The Mad Minute</h1>
+                <h2>Instructions:</h2>
+                <p>Choose your preferred type of math problems or select random below. You have 60 seconds to answer as many as possible. Be quick but also think carefully!</p>
+                <!--Welcome screen-->
+                <div id="selection">
+                    <h3>+</h3>
+                    <h3>&minus;</h3>
+                    <h3>&times;</h3>
+                    <h3>&divide;</h3>
+                    <h3>?</h3> </div>
+            </div>
         </div>
         <!--Game area-->
-        <div id="game">
-            <div id="problem">
-                <h4 id="firstNum"></h4>
-                <h4 id="operator"></h4>
-                <h4 id="secondNum"></h4> </div>
-            <div id="rule"></div>
-            <div>
-                <form id="getAnswer" autocomplete="off" accept-charset="utf-8">
-                    <input type="text" id="answer" name="answer">
-                    <input type="submit" value="Submit Answer"> </form>
+        <div class="row">
+            <div id="game">
+                <div id="problem">
+                    <h4 id="firstNum"></h4>
+                    <h4 id="operator"></h4>
+                    <h4 id="secondNum"></h4> </div>
+                <div id="rule"></div>
+                <div>
+                    <form id="getAnswer" autocomplete="off" accept-charset="utf-8">
+                        <input type="text" id="answer" name="answer" inputmode="numeric" pattern="[\d]+" maxlength="2">
+                        <input type="submit" value="Submit Answer"> </form>
+                </div>
+                <div>
+                    <h2 id="timer"></h2> </div>
             </div>
-            <div>
-                <h2 id="timer"></h2> </div>
         </div>
         <!--Score screen-->
-        <div id="score">
-            <h1>Well done!</h1>
-            <p></p>
-            <h2>Try again</h2> </div>
-        <button id="test">test</button>
+        <div class="row">
+            <div id="score" class="col-xs-12">
+                <h1>Well done!</h1>
+                <p></p>
+                <h2>Try again</h2> </div>
+        </div>
     </div>
     <!--Audio files-->
     <audio id="correct" src="audio/correct.mp3"></audio>

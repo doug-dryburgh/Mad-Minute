@@ -12,15 +12,10 @@
  }
  
  #welcome {
-     #display: none;
      display: flex;
      flex-direction: column;
      align-items: center;
-     #background-color: white;
-     width: 500px;
      margin-top: 40px;
-     margin-left: auto;
-     margin-right: auto;
  }
  
  #selection {
@@ -28,12 +23,12 @@
      width: 100%;
      justify-content: space-around;
  }
-
+ 
  #selection > h3:hover,
  #score > h2:hover {
      color: darkred;
      cursor: pointer;
-     transition: .25s;
+     transition: .33s;
  }
  
  #selection > h3:active,
@@ -43,13 +38,9 @@
  
  #game {
      display: none;
-     #display: flex;
      flex-direction: column;
      justify-content: space-around;
-     width: 600px;
      margin-top: 40px;
-     margin-left: auto;
-     margin-right: auto;
  }
  
  #game > div {
@@ -57,16 +48,11 @@
      justify-content: center;
  }
  
- #score {
-     display: none;
-     #display: flex;
-     flex-direction: column;
-     align-items: center;
-     #background-color: white;
-     width: 500px;
-     margin-top: 40px;
-     margin-left: auto;
-     margin-right: auto;
+ #rule {
+     width: 90%;
+     height: 5px;
+     margin: auto;
+     background-color: black;
  }
  
  input[type=text] {
@@ -81,45 +67,52 @@
  }
  
  input[type=submit] {
-     position: absolute;
-     left: -9999px;
+     display: none;
  }
  
- #rule {
-     width 400px;
-     height: 5px;
-     background-color: black;
+ #score {
+     display: none;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 40px;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4 {
+     font-family: 'Kanit', sans-serif;
+     color: black;
+     text-shadow: 1px 1px 2px gray;
  }
  
  h1 {
      font-size: 3.5em;
-     font-family: 'Kanit', sans-serif;
-     color: black;
-     text-shadow: 1px 1px 2px gray;
  }
  
  h2 {
      font-size: 2.5em;
-     font-family: 'Kanit', sans-serif;
-     color: black;
-     text-shadow: 1px 1px 2px gray;
  }
  
  h3 {
      font-size: 3em;
-     font-family: 'Kanit', sans-serif;
-     color: black;
-     text-shadow: 1px 1px 2px gray;
  }
  
  h4 {
      font-size: 12em;
-     font-family: 'Kanit', sans-serif;
-     color: black;
-     text-shadow: 1px 1px 2px gray;
  }
  
  p {
      font-family: sans-serif;
      color: black;
+     text-align: center;
+ }
+ 
+ @media only screen and (max-width: 450px) {
+     h4 {
+         font-size: 8em;
+     }
+     input[type=text] {
+         font-size: 8em;
+     }
  }
