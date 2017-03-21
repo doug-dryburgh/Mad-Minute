@@ -8,6 +8,15 @@ $(document).ready(function () {
     var totalQuestions = 1;
     var correct = 0;
     var incorrect = 0;
+    //TRANSITION WELCOME SCREEN
+    function startGame() {
+        $("#welcome").fadeOut(200);
+        setTimeout(function () {
+            $("#game").fadeIn(200);
+            $("#game").css("display", "flex");
+            startTime();
+        }, 200);
+    }
     //TIMER
     $("#timer").html("0:" + seconds);
 
@@ -41,14 +50,13 @@ $(document).ready(function () {
         $("#operator").html("+");
         $("#secondNum").html(value2);
     }
-    //addition();
     //SUBTRACTION
     $("#selection > h3:nth-child(2)").click(function () {
         mode = "subtraction";
         subtraction();
         startGame();
     });
-    //subtraction();
+
     function subtraction() {
         value1 = Math.floor(Math.random() * 11) + 10;
         value2 = Math.floor(Math.random() * 11);
@@ -63,7 +71,7 @@ $(document).ready(function () {
         multiplication();
         startGame();
     });
-    //multiplication();
+
     function multiplication() {
         value1 = Math.floor(Math.random() * 11);
         value2 = Math.floor(Math.random() * 11);
@@ -78,7 +86,7 @@ $(document).ready(function () {
         division();
         startGame();
     });
-    //division();
+
     function division() {
         value1 = Math.floor(Math.random() * 11) + 6;
         value2 = Math.floor(Math.random() * 6) + 1;
@@ -112,15 +120,6 @@ $(document).ready(function () {
             division();
         }
     }
-    //TRANSITION WELCOME SCREEN
-    function startGame() {
-        $("#welcome").fadeOut(200);
-        setTimeout(function () {
-            $("#game").fadeIn(200);
-            $("#game").css("display", "flex");
-            startTime();
-        }, 200);
-    }
     //SUBMIT ANSWER
     $("#getAnswer").submit(function (event) {
         event.preventDefault();
@@ -128,58 +127,38 @@ $(document).ready(function () {
         checkAnswer();
         $("#answer").val("");
         if (mode == "addition") {
-            $("#problem").animate({
-                opacity: "0"
-            }, 200);
+            fadeOut();
             setTimeout(function () {
                 addition();
-                $("#problem").animate({
-                    opacity: "1"
-                }, 200);
+                fadeIn();
             }, 200);
         }
         else if (mode == "subtraction") {
-            $("#problem").animate({
-                opacity: "0"
-            }, 200);
+            fadeOut();
             setTimeout(function () {
                 subtraction();
-                $("#problem").animate({
-                    opacity: "1"
-                }, 200);
+                fadeIn();
             }, 200);
         }
         else if (mode == "multiplication") {
-            $("#problem").animate({
-                opacity: "0"
-            }, 200);
+            fadeOut();
             setTimeout(function () {
                 multiplication();
-                $("#problem").animate({
-                    opacity: "1"
-                }, 200);
+                fadeIn();
             }, 200);
         }
         else if (mode == "division") {
-            $("#problem").animate({
-                opacity: "0"
-            }, 200);
+            fadeOut()
             setTimeout(function () {
                 division();
-                $("#problem").animate({
-                    opacity: "1"
-                }, 200);
+                fadeIn();
             }, 200);
         }
         else if (mode == "random") {
-            $("#problem").animate({
-                opacity: "0"
-            }, 200);
+            fadeOut()
             setTimeout(function () {
                 random();
-                $("#problem").animate({
-                    opacity: "1"
-                }, 200);
+                fadeIn();
             }, 200);
         }
     });
@@ -197,7 +176,7 @@ $(document).ready(function () {
     }
     //SCORE SCREEN
     function finalScore() {
-        $("#score > p").html("You saw " + totalQuestions + " questions. You got " + correct + " right and " + incorrect + " wrong");
+        $("#score > p").html("You saw " + totalQuestions + " questions. You got " + correct + " right and " + incorrect + " wrong. You averaged one question per " + (60 / (correct + incorrect)).toFixed(2) + " second\(s\).");
         $("#game").fadeOut(200);
         setTimeout(function () {
             $("#score").fadeIn(200);
@@ -215,9 +194,16 @@ $(document).ready(function () {
             $("#welcome").css("display", "flex");
         }, 200);
     });
-
-    function test(event) {}
-    $("#test").click(function () {
-        finalScore();
-    });
+    //FADE OUT
+    function fadeOut() {
+        $("#problem").animate({
+            opacity: "0"
+        }, 200);
+    }
+    //FADE IN
+    function fadeIn() {
+        $("#problem").animate({
+            opacity: "1"
+        }, 200);
+    }
 });
